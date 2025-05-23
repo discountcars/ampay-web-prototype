@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ampay - Web App Prototype</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #333;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    footer {
+      background: #f1f1f1;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ampay</h1>
+    <p>Web Prototype — Fast, Simple, Secure Peer-to-Peer Payments</p>
+  </header>
+
+  <nav>
+    <a href="#signin">Sign In</a>
+    <a href="#send">Send</a>
+    <a href="#receive">Receive</a>
+    <a href="#history">History</a>
+    <a href="#profile">Profile</a>
+  </nav>
+
+  <div class="container">
+    <div class="card" id="signin">
+      <h2>Sign In</h2>
+      <input type="email" placeholder="Enter your email" />
+      <button>Continue</button>
+    </div>
+
+    <div class="card" id="send">
+      <h2>Send Money</h2>
+      <input type="text" placeholder="Recipient Username or Phone" />
+      <input type="number" placeholder="Amount (USD)" />
+      <button>Send with 1% Fee</button>
+    </div>
+
+    <div class="card" id="receive">
+      <h2>Request Money</h2>
+      <input type="text" placeholder="Sender Username or Phone" />
+      <input type="number" placeholder="Amount (USD)" />
+      <button>Request</button>
+    </div>
+
+    <div class="card" id="history">
+      <h2>Transaction History</h2>
+      <p>No transactions yet.</p>
+    </div>
+
+    <div class="card" id="profile">
+      <h2>Your Profile</h2>
+      <p>Linked Payment Methods:</p>
+      <ul>
+        <li>Stripe: <em>Not connected</em></li>
+        <li>PayPal: <em>Not connected</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Ampay. A product of A&M Discount Cars L.L.C.
+  </footer>
+</body>
+</html>
